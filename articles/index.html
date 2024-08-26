@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en-GB' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head><meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="" name="keywords">
+<title>Dipkumar's project</title>
+<link rel="stylesheet" href="../docs/style.css">
+<link rel="stylesheet" href="docs/content.css">
+
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+      </div>
+
+    <div class='content'>
+        <span onclick='closeNav()'>
+        <div id="post"></div>
+        <section id="articleSection">
+            <!-- Articles will be dynamically added here -->
+        </section>
+        </span>
+    </div>
+
+    
+
+<div id="theme">
+    <div class='nav1' style='position: fixed; width: 100%; z-index: 2;'>
+        <div class='headImg-D'><span id='H-title' style=' font-size: 200%;'></span></div>
+        </div>
+        <div class='nav1'>
+        <ul class='sidenav'>
+        <span id='list-D-H'></span>
+        <span><li id='list-Desktop'></li></span>
+        <span id='list-D-F'></span>
+        </ul>
+        </div>
+        <div class='sidepanel' id='mySidepanel'>
+        <a title="close" class='closebtn' href='javascript:void(0)' id='closeBtn' onclick='closeNav()'>&#215;</a>
+        <span id='list-M-H'></span>
+        <span id='list-Mobile' ></span>
+        <span id='list-M-F'></span>
+        </div>
+        <div class='mobNav1'>
+        <button title="open" class='openbtn' id='openNav' onclick='openNav()'>&#9776;</button>
+        <div class='headImg'><span id='h-title' style='font-size: 200%;'></span></div>
+        </div>
+        <div id='back-btn'></div>
+</div>
+<script src="../docs/script.js"></script>
+<script src="docs/content.js"></script>
+<script> content('articles.json','articleSection','div','post')
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loading overlay once all content is loaded
+  document.getElementById("loading-overlay").style.display = "none";
+
+  // Call your functions here
+//loadXMLComponent("theme","docs/components/t.xml");
+//loadXMLComponent("H-title","docs/components/H-d-title.xml");
+//loadXMLComponent("h-title","docs/components/h-title.xml");
+loadXMLComponent("list-D-H","docs/list-D-H.xml");
+loadXMLComponent("list-M-H","docs/list-M-H.xml");
+loadXMLComponent("list-Mobile","docs/option.xml");
+loadXMLComponent("list-Desktop","docs/option.xml");
+
+//loadXMLContent('post','contents/home.html');
+});
+</script>
+</body>
+</html>
